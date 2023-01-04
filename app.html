@@ -6,13 +6,14 @@
 <body>
 <script>
 async function init() {
-    console.log(board.getUserInfo());
 await miro.board.ui.openModal({
 url: "modal.html",
 width: 600,
 height: 500,
 fullscreen: false
 });
+        console.log(board.getUserInfo());
+
 }
 init();
 </script>
