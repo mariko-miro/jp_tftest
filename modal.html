@@ -11,18 +11,18 @@
 
 <button id="close">Accept</button>
 <script>
-  console.log("log start");  
+//   console.log("log start");  
   
-  async function getUserID() {
-    const userInfo = await miro.board.getUserInfo();
-    return userInfo.id;
-  }
+//   async function getUserID() {
+//     const userInfo = await miro.board.getUserInfo();
+//     return userInfo.id;
+//   }
 
-  getUserID().then(result => {
-      console.log(result); 
-  });
+//   getUserID().then(result => {
+//       console.log(result); 
+//   });
   
-  console.log("log end");
+//   console.log("log end");
 
 function close() {
 miro.board.ui.closeModal();
