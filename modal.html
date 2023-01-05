@@ -11,9 +11,17 @@
 
 <button id="close">Accept</button>
 <script>
-  console.log("log start");
-  const userInfo = await miro.board.getUserInfo();
-  console.log(userInfo.id); // => "3658432978520043388"
+  console.log("log start");  
+  
+  async function getUserID() {
+    const userInfo = await await miro.board.getUserInfo();
+    return userInfo.id;
+  }
+
+  getUserID().then(result => {
+      console.log(result); 
+  });
+  
   console.log("log end");
 
 function close() {
