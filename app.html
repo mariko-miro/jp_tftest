@@ -5,13 +5,23 @@
 </head>
 <body>
 <script>
-async function init() {
-await miro.board.ui.openModal({
-url: "https://mariko-miro.github.io/jp_tftest/modal.html",
-width: 600,
-height: 500,
-fullscreen: false
+  
+async function getUserID() {
+  const userInfo = await miro.board.getUserInfo();
+  return userInfo.id;
+}
+
+getUserID().then(result => {
+    console.log(result); 
 });
+  
+async function init() {
+    await miro.board.ui.openModal({
+      url: "https://mariko-miro.github.io/jp_tftest/modal.html",
+      width: 600,
+      height: 500,
+      fullscreen: false
+    });
 }
 init();
 </script>
