@@ -12,9 +12,9 @@
 <button id="close">Accept</button>
 <script>
   console.log("log start");
-    console.log(miro.board.getUserInfo());
-    console.log(miro.board.getUserInfo('id'));
-    console.log("log end");
+  const userInfo = await miro.board.getUserInfo();
+  console.log(userInfo.id); // => "3658432978520043388"
+  console.log("log end");
 
 function close() {
 miro.board.ui.closeModal();
